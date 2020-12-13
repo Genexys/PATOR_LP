@@ -1,0 +1,35 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+@import "vendor/swiper";
+@import "vendor/jquery.fancybox.css";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/typography";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+//---------------------------------
+
+@import "blocks/header";
+@import "blocks/first-screen";
+@import "blocks/pator-task";
+@import "blocks/equipment";
+@import "blocks/price";
+@import "blocks/warranty";
+@import "blocks/block-review";
+@import "blocks/map";
+@import "blocks/buy";
+@import "blocks/form-block";
+@import "blocks/checkbox";
+@import "blocks/thnx-modal";
+@import "blocks/footer";
+@import "blocks/modal";

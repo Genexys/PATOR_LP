@@ -1,0 +1,70 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "private": true,
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
+    "build": "gulp build",
+    "start": "gulp start",
+    "webp": "gulp webp",
+    "imagemin": "gulp imagemin",
+    "sprite": "gulp sprite"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "7.12.7",
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "10.0.x",
+    "babel-loader": "8.2.1",
+    "browser-sync": "2.26.x",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.2",
+    "eslint": "^7.14.0",
+    "eslint-config-htmlacademy": "0.6.x",
+    "file-loader": "^6.2.0",
+    "gulp": "4.0.x",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "9.0.x",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "4.1.x",
+    "gulp-sourcemaps": "3.0.x",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "3.0.2",
+    "gulp-webp": "^4.0.1",
+    "pixel-glass": "^1.0.13",
+    "posthtml-include": "^1.6.0",
+    "stylelint": "13.8.x",
+    "stylelint-config-htmlacademy": "0.1.x",
+    "webpack": "5.6.0",
+    "webpack-stream": "6.1.1"
+  },
+  "dependencies": {
+    "del": "^6.0.0",
+    "jquery": "^3.5.1",
+    "postcss": "^8.1.10",
+    "smoothscroll-polyfill": "^0.4.4",
+    "validate.js": "^0.13.1"
+  },
+  "engines": {
+    "node": "8.15"
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+  padding-top: 105px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 1640px;
+  }
+
+  .main-menu {
+    margin-right: 25px;
+    margin-left: auto;
+  }
+}

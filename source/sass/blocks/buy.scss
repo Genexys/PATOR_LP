@@ -1,0 +1,117 @@
+.buy {
+  padding-top: 70px;
+  box-shadow: 0 -24px 53px rgba(0, 0, 0, 0.16);
+
+  &__varinate {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding-top: 90px;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    max-width: 560px;
+
+    &:first-of-type {
+      padding-right: 20px;
+
+      @media screen and (max-width: 992px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &-title {
+    font-weight: 300;
+    font-size: 34px;
+    letter-spacing: 0em;
+    line-height: 46px;
+    text-align: left;
+    color: $color-blue;
+  }
+
+  &-text {
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 26px;
+    text-align: left;
+    color: #9dafbd;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    padding-bottom: 20px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 30px;
+
+    img {
+      margin: auto;
+    }
+  }
+
+  &__about-title {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    text-align: center;
+    color: #9dafbd;
+  }
+
+  &__title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 34px;
+    letter-spacing: 0em;
+    line-height: 46px;
+    text-align: center;
+    color: $color-blue;
+  }
+
+  &__about {
+    max-width: 555px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 26px;
+    text-align: center;
+    color: $color-blue;
+  }
+
+  &__address {
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 26px;
+    text-align: center;
+    font-style: normal;
+    color: #707070;
+
+    a {
+      color: $color-black;
+    }
+  }
+}
+

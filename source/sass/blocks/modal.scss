@@ -1,0 +1,146 @@
+.fancybox-bg {
+  background-color: $bg-modal;
+}
+
+.pator-el-modal {
+  max-width: 819px;
+  width: 100%;
+  padding: 0;
+  overflow: visible;
+  background-color: transparent;
+
+  .fancybox-button {
+    position: absolute;
+    right: -14px;
+    top: -16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    background: #ffffff;
+    outline-width: 0;
+
+    svg {
+      position: relative;
+      top: 1px;
+      left: 0;
+      width: 21px;
+      height: auto;
+      transform: rotate(180deg);
+    }
+  }
+
+  .modal-img {
+    position: absolute;
+    top: -64.9%;
+    left: -38.4%;
+  }
+
+  .left-title {
+    position: absolute;
+    top: 215px;
+    left: -211px;
+    width: 220px;
+    letter-spacing: -0.04rem;
+
+    &__name {
+      position: relative;
+      display: block;
+      margin-bottom: 10px;
+      font-family: "DIN2014-Narrow";
+      font-weight: bold;
+      font-size: 74px;
+      line-height: 89px;
+      text-align: left;
+      color: #ffffff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        bottom: -2px;
+        width: 100%;
+        height: 7px;
+        background-color: #ffffff;
+      }
+    }
+
+    &__text {
+      margin: 0;
+      padding-left: 5px;
+      font-family: "DIN2014-Narrow";
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 28px;
+      text-align: left;
+      color: #ffffff;
+    }
+  }
+
+  .modal-content {
+    max-width: 819px;
+    width: 100%;
+    height: 334px;
+    padding: 65px 115px 25px 135px;
+    border-radius: 11px;
+    background: #ffffff;
+    border: 1px solid #707070;
+    box-shadow: 0 13px 56px rgba(0, 0, 0, 0.16);
+
+    &__title {
+      margin: 0 0 10px;
+      font-family: "RobotoCondensed";
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 32px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      margin: 0;
+      letter-spacing: -0.024rem;
+    }
+
+    &__blockquote {
+      margin: 5px 0 0;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .warning {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -70px;
+        width: 43px;
+        height: 40px;
+        background-image: url('../img/svg/warning-icon.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+  }
+}
+
+.modal-images {
+  img {
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}

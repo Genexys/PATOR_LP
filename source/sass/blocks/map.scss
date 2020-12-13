@@ -1,0 +1,22 @@
+.map-wrapper {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.link-map {
+  font-weight: normal;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #026fc2;
+
+  svg {
+    fill: #106FC2;
+  }
+}
+
+.b-map {
+  height: 514px;
+  margin-top: 60px;
+}

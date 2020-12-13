@@ -1,0 +1,126 @@
+.pator-task {
+  position: relative;
+  z-index: 1;
+  padding-top: 91px;
+  //box-shadow: 0px -24px 53px rgba(0, 0, 0, 0.16);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -174px;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(0deg,rgba(0,0,0, 0.15) 0%, rgba(255,255,255, 0.1) 55%);
+  }
+
+  .section-title {
+    margin-bottom: 10px;
+  }
+
+  .section-description {
+    margin-bottom: 72px;
+  }
+}
+
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  margin: 0 auto 88px;
+  padding: 0 0 0 0;
+  list-style: none;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: calc(100% / 3);
+    padding-bottom: 50px;
+
+    @media screen and (max-width: 992px) {
+      width: 50%;
+      padding-right: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+      //justify-content: center;
+      max-width: 300px;
+      width: 100%;
+      padding-right: 10px;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 80px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    padding-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 26px;
+    text-align: left;
+    color: $color-blue;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: #9dafbd;
+  }
+}
+
+.warning-fire-safety {
+  max-width: 866px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 90px 33px;
+  border-radius: 29px;
+  background: #fcfcfc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  @media screen and (max-width: 767px) {
+    padding: 10px 30px 33px;
+  }
+
+  &__icon {
+    position: relative;
+    bottom: 45px;
+    display: block;
+    margin: 0 auto -19px;
+  }
+
+  &__title {
+    margin: 0 0 9px;
+    font-family: "RobotoCondensed";
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    color: $color-black;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 26px;
+    text-align: center;
+    color: #6c6c6c;
+  }
+}

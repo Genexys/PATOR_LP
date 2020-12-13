@@ -1,0 +1,99 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "DIN2014";
+
+  font-display: swap;
+  src:
+    url("../fonts/DIN2014-Regular/DIN2014-Regular.woff2") format("woff2"),
+    url("../fonts/DIN2014-Regular/DIN2014-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "DIN2014";
+
+  font-display: swap;
+  src:
+    url("../fonts/DIN2014-Bold/DIN2014-Bold.woff2") format("woff2"),
+    url("../fonts/DIN2014-Bold/DIN2014-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "DIN2014-Narrow";
+
+  font-display: swap;
+  src:
+    url("../fonts/DIN2014Narrow-Bold/DIN2014Narrow-Bold.woff2") format("woff2"),
+    url("../fonts/DIN2014Narrow-Bold/DIN2014Narrow-Bold.woff") format("woff");
+}
+
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "DIN2014-Narrow";
+
+  font-display: swap;
+  src:
+    url("../fonts/DIN2014Narrow-DemiBold/DIN2014Narrow-DemiBold.woff2") format("woff2"),
+    url("../fonts/DIN2014Narrow-DemiBold/DIN2014Narrow-DemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src:
+    url("../fonts/Roboto-Light/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light/Roboto-Light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src:
+    url("../fonts/Roboto-Regular/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src:
+    url("../fonts/Roboto-Medium/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium/Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "RobotoCondensed";
+
+  font-display: swap;
+  src:
+    url("../fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "RobotoCondensed";
+
+  font-display: swap;
+  src:
+    url("../fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.woff") format("woff");
+}
