@@ -25,6 +25,10 @@
     background: #ffffff;
     outline-width: 0;
 
+    @media screen and (max-width: 1110px) {
+      right: 0;
+    }
+
     svg {
       position: relative;
       top: 1px;
@@ -39,6 +43,17 @@
     position: absolute;
     top: -64.9%;
     left: -38.4%;
+
+    @media screen and (max-width: 1320px) {
+      top: -24.9%;
+      left: -18.4%;
+      width: 200px;
+    }
+
+    @media screen and (max-width: 1110px) {
+      left: 0;
+      width: 150px;
+    }
   }
 
   .left-title {
@@ -47,6 +62,15 @@
     left: -211px;
     width: 220px;
     letter-spacing: -0.04rem;
+
+    @media screen and (max-width: 1320px) {
+      width: 137px;
+      left: -140px;
+    }
+
+    @media screen and (max-width: 1110px) {
+      display: none;
+    }
 
     &__name {
       position: relative;
@@ -58,6 +82,11 @@
       line-height: 89px;
       text-align: left;
       color: #ffffff;
+
+      @media screen and (max-width: 1320px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
 
       &::after {
         content: "";
@@ -79,18 +108,31 @@
       line-height: 28px;
       text-align: left;
       color: #ffffff;
+
+      @media screen and (max-width: 1320px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
 
   .modal-content {
     max-width: 819px;
     width: 100%;
-    height: 334px;
-    padding: 65px 115px 25px 135px;
+    //height: 334px;
+    padding: 65px 115px 60px 135px;
     border-radius: 11px;
     background: #ffffff;
     border: 1px solid #707070;
     box-shadow: 0 13px 56px rgba(0, 0, 0, 0.16);
+
+    @media screen and (max-width: 768px) {
+      padding: 65px 30px 60px 35px;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 65px 10px 60px 15px;
+    }
 
     &__title {
       margin: 0 0 10px;
@@ -128,6 +170,11 @@
         background-image: url('../img/svg/warning-icon.svg');
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media screen and (max-width: 768px) {
+          left: 0;
+          top: -40px;
+        }
       }
     }
 

@@ -31,6 +31,11 @@
 
     @media screen and (max-width: 1240px) {
       margin-bottom: 30px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 60px 30px;
     }
   }
 
@@ -86,6 +91,14 @@
     border-radius: 5px;
     background: #fafafa;
     border: 1px solid #d1dbe3;
+
+    @media screen and (max-width: 1240px) {
+      height: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 30px;
+    }
 
     &:nth-of-type(1) {
       margin-bottom: 30px;
@@ -164,6 +177,7 @@
 }
 
 .add-option {
+  flex-shrink: 0;
   display: block;
   margin-left: auto;
   padding: 0;
@@ -175,6 +189,10 @@
   color: #026fc2;
   outline: none;
   cursor: pointer;
+
+  @media screen and (max-width: 540px) {
+    margin-top: 20px;
+  }
 
   span {
     display: flex;
@@ -193,6 +211,10 @@
     border: 2px solid #000;
     background: #fff;
     outline-width: 0;
+  }
+
+  svg {
+    flex-shrink: 0;
   }
 }
 
@@ -218,4 +240,9 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
+
+  @media screen and (max-width: 540px) {
+    flex-direction: column;
+    margin-top: 20px;
+  }
 }

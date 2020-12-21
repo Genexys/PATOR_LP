@@ -21,3 +21,4 @@ inputValue();
 validateFooterForm();
 goTo();
 scrollToMenu();
+
