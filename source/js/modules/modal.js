@@ -5,7 +5,7 @@ const modal = () => {
     touch: false,
 
     btnTpl   : {
-      smallBtn : '<button data-fancybox-close class="fancybox-button fancybox-button--close" aria-label="Close" title="Close"><svg width="19" height="19"><use xlink:href="#arrow-circle-icon"></use></svg></button>'
+      smallBtn : '<button data-fancybox-close class="fancybox-button fancybox-button--close" aria-label="Close" title="Close"><svg width="32" height="32"><use xlink:href="#icon-arrow-button"></use></svg></button>'
     }
   });
 

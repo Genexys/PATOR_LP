@@ -74,24 +74,32 @@ export const validateForm = function (form, config, closeModal= false) {
         processData: false,
         contentType: false,
         data: dataForm,
+        beforeSend: function () {
+          form.querySelector('.main-btn').setAttribute('disabled', 'disabled');
+        },
         success: function success(dataForm) {
 
           form.reset();
+
+          $.fancybox.close();
 
           $.fancybox.open({
             src: '#thnx-modal',
             type: 'inline',
           });
 
-          // setTimeout(() => {
-          //   $.fancybox.close({
-          //     src: '#thnx-modal',
-          //     type: 'inline',
-          //   });
-          // }, 2000);
+          setTimeout(() => {
+            $.fancybox.close({
+              src: '#thnx-modal',
+              type: 'inline',
+            });
+          }, 2000);
+
+          form.querySelector('.main-btn').removeAttribute('disabled');
 
         },
         error: function error(xhr, ajaxOptions, thrownError) {
+          form.querySelector('.main-btn').removeAttribute('disabled');
           console.log(xhr.status);
           console.log(thrownError);
         },

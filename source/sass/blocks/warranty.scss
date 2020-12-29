@@ -40,12 +40,6 @@
       margin-bottom: 30px;
     }
 
-    &:not(:first-of-type) {
-      &::after {
-        background-color: #9DAFBD;
-      }
-    }
-
     &::after {
       content: "";
       position: absolute;

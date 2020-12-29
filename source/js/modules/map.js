@@ -18,94 +18,6 @@ const getMap = () => {
         }
       );
     });
-
-    map.each(function(){
-      var map,
-        loc = $(this).data('loc').replace(' ', '').split(','),
-        position = new google.maps.LatLng(loc[0], loc[1]),
-        mapOptions = {
-          center: position,
-          zoom: 11,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          zoomControl: true,
-          disableDefaultUI: true,
-          // scrollwheel: false,
-          rotateControl: false
-        };
-
-      map = new google.maps.Map($(this).get(0), mapOptions);
-      map.setTilt(45);
-
-      var latlngbounds = new google.maps.LatLngBounds();
-
-      for(var i = 0; i < locArray.length; i++){
-
-        var loc = locArray[i].loc.replace(' ', '').split(',');
-        position = new google.maps.LatLng(loc[0], loc[1]);
-
-        latlngbounds.extend(position);
-
-        var marker = new google.maps.Marker({
-          position: position,
-          map: map,
-          title: '',
-          animation: google.maps.Animation.DROP,
-          icon: {
-            url: $('.js-map').data('pin')
-          }
-        });
-
-        map.setCenter(position);
-        addInfoWindow(marker, locArray[i].content);
-      }
-
-      function addInfoWindow(marker, message) {
-        var infoWindow = new google.maps.InfoWindow({
-          content: '<div class="gm-infowindow">'+ message +'</div>'
-        });
-
-        infoWindows.push(infoWindow);
-
-        google.maps.event.addListener(marker, 'click', function () {
-          closeAllInfoWindows();
-          infoWindow.open(map, marker);
-        });
-
-        google.maps.event.addListener(map, 'click', function () {
-          closeAllInfoWindows();
-        });
-      }
-
-      function closeAllInfoWindows(){
-        $.each(infoWindows, function(i){
-          infoWindows[i].close();
-        });
-      }
-
-      if(locArray.length > 1){
-        map.setCenter(latlngbounds.getCenter(), map.fitBounds(latlngbounds));
-      }
-
-      map.setOptions({draggable: WINDOW_WIDTH > 767});
-
-      $(document).on('click', '.js-map__label', function(){
-        if(WINDOW_WIDTH > 767){
-          var loc = $(this).data('loc').replace(' ', '').split(','),
-            mapOffsetTop = ($('.b-map').offset().top - 60);
-
-          $('body, html').animate({
-            scrollTop: mapOffsetTop
-          }, 500);
-
-          setTimeout(function(){
-            map.setCenter(new google.maps.LatLng(loc[0], loc[1]));
-            map.setZoom(15);
-          }, 500);
-
-          return false;
-        }
-      });
-    });
   }
 
   function initMap() {
@@ -125,7 +37,6 @@ const getMap = () => {
               "name": el.NAME,
               "address": el.ADDRESS ? el.ADDRESS : '',
               "phone": el.PHONE ? el.PHONE : '',
-              "link": el.LINK,
             }
           }
         );
@@ -133,8 +44,8 @@ const getMap = () => {
     }
 
     const map = new google.maps.Map(mapOffice, {
-      zoom: 7,
-      center: {lat: 45.0293118, lng: 38.959727},
+      zoom: 4.6,
+      center: {lat: 54.0293118, lng: 38.959727},
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true,
       zoomControl: true,
@@ -155,7 +66,7 @@ const getMap = () => {
         }
       });
 
-      map.setCenter(position);
+      // map.setCenter(position);
       addInfoWindow(marker, el.info);
     });
 
@@ -197,8 +108,8 @@ const getMap = () => {
         }, 500);
 
         setTimeout(function(){
-          map.setCenter(new google.maps.LatLng(loc[0], loc[1]));
-          map.setZoom(15);
+          // map.setCenter(new google.maps.LatLng(loc[0], loc[1]));
+          // map.setZoom(15);
         }, 500);
 
         return false;
@@ -218,4 +129,4 @@ const getMap = () => {
   });
 }
 
-export { getMap };
+export {getMap};

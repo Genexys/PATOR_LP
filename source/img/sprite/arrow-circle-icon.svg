@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21.037" height="21.037" viewBox="0 0 21.037 21.037">
-  <g id="arrow-circle-icon" transform="translate(1 1)">
-    <path id="Контур_16" data-name="Контур 16" d="M19.037,9.518A9.518,9.518,0,1,1,9.518,0a9.518,9.518,0,0,1,9.518,9.518Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path id="Контур_17" data-name="Контур 17" d="M0,7.615,3.807,3.807,0,0" transform="translate(9.518 5.711)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path id="Контур_18" data-name="Контур 18" d="M0,0H7.615" transform="translate(5.711 9.518)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="arrow-circle-icon" transform="translate(-3 -3)">
+    <path id="Контур_17" data-name="Контур 17" d="M18,19.615l3.807-3.807L18,12" transform="translate(-4.88 -2.807)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Контур_18" data-name="Контур 18" d="M12,18h7.615" transform="translate(-2.807 -5)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="Эллипс_17" data-name="Эллипс 17" transform="translate(3 3)" fill="none" stroke="#000" stroke-width="2">
+      <circle cx="10" cy="10" r="10" stroke="none"/>
+      <circle cx="10" cy="10" r="9" fill="none"/>
+    </g>
   </g>
 </svg>

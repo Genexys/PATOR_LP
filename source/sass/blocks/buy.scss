@@ -29,10 +29,15 @@
   &-title {
     font-weight: 300;
     font-size: 34px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     line-height: 46px;
     text-align: left;
     color: $color-blue;
+
+    @media screen and (max-width: 992px) {
+      text-align: center;
+      line-height: 31px;
+    }
   }
 
   &-text {
@@ -41,6 +46,10 @@
     line-height: 26px;
     text-align: left;
     color: #9dafbd;
+
+    @media screen and (max-width: 992px) {
+      text-align: center;
+    }
   }
 
   &__btn {

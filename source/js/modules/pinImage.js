@@ -8,7 +8,7 @@ const pinImage = () => {
     console.log(md.tablet(), md.phone(), md.mobile(), md.tablet() === "iPad", md.phone() === 'IPhone' );
 
     if (window.innerWidth > 1024 && md.os() !== 'iOS') {
-      console.log('ios')
+      console.log('ios');
       const section1 = document.querySelectorAll('.section')[0];
 
       // init controller
@@ -19,9 +19,9 @@ const pinImage = () => {
       const tween3 = new TimelineMax();
       const tween4 = new TimelineMax();
 
-      tween
-        .to('.pator-front--close', 2, {autoAlpha: 0}, section1.offsetHeight + 350)
-        .to('.pator-front--open', 2, {autoAlpha: 1}, section1.offsetHeight + 300);
+      // tween
+      //   .to('.pator-front--close', 2, {autoAlpha: 0});
+        // .to('.pator-front--open', 1, {autoAlpha: 1}, section1.offsetHeight + 300);
 
       tween2
       // .to('.pator-front--close', 1, {autoAlpha: 0}, section1.offsetHeight)
@@ -31,22 +31,45 @@ const pinImage = () => {
       // .to('.circle--2', 1, {autoAlpha: 1}, section1.offsetHeight);
 
       tween3
-        .to('.pator-front--close', 1, {autoAlpha: 0})
+        // .to('.pator-front--close', 1, {autoAlpha: 0})
         // .to('.pator-front--open-side', 1, {autoAlpha: 1})
         .to('.circle--1', 1, {autoAlpha: 0});
 
-      tween4
-        .to('.pator-front', {autoAlpha: 1});
+      // tween4
+      //   .to('.pator-front', {autoAlpha: 1});
 
-      if (window.innerHeight >= 830) {
+      if (true) {
         const pator1 = new ScrollMagic.Scene({
           triggerElement: "#trigger1",
-          triggerHook: 1,
-          offset: 100,
-          duration: section1.offsetHeight + 250,
+          triggerHook: 0,
+          offset: 200,
+          duration: section1.offsetHeight + 200,
         })
           .setPin("#pin1")
-          .setTween(tween)
+          // .setTween(tween)
+          .setClassToggle('.pator-front--open', 'active')
+          // .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
+          .addTo(controller);
+
+        const circleBlue = new ScrollMagic.Scene({
+          triggerElement: "#trigger1",
+          triggerHook: 0,
+          offset: 200,
+          duration: section1.offsetHeight * 3,
+        })
+          // .setTween(tween)
+          .setClassToggle('.circle--brown', 'blue')
+          // .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
+          .addTo(controller);
+
+        const pator11 = new ScrollMagic.Scene({
+          triggerElement: "#trigger1",
+          triggerHook: 0,
+          offset: 400,
+          duration: section1.offsetHeight * 3,
+        })
+          // .setTween(tween)
+          .setClassToggle('.pator-front--close', 'hidden')
           // .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
           .addTo(controller);
 
@@ -58,10 +81,19 @@ const pinImage = () => {
           duration: section1.offsetHeight * 2,
         })
           .setPin("#pin1")
-          .setTween(tween)
+          // .setTween(tween)
           // .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
           .addTo(controller);
       }
+
+      // const pator22 = new ScrollMagic.Scene({
+      //   triggerElement: "#trigger2",
+      //   triggerHook: 0,
+      //   offset: 0,
+      //   duration: section1.offsetHeight / 2.5,
+      // })
+      //   .setClassToggle('.pator-front--close', 'hidden')
+      //   .addTo(controller);
 
       const pator2 = new ScrollMagic.Scene({
         triggerElement: "#trigger2",
@@ -73,11 +105,12 @@ const pinImage = () => {
         .setTween(tween2)
         // .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
         .addTo(controller);
-      if (window.innerHeight >= 830) {
+      if (true) {
         if (window.innerWidth >= 767) {
           const scene3Pin = new ScrollMagic.Scene({
             triggerElement: "#trigger3",
             triggerHook: 1,
+            offset: 100,
             duration: section1.offsetHeight,
           })
             .setPin(".circle--1")
@@ -106,12 +139,12 @@ const pinImage = () => {
           .addTo(controller);
       }
 
-
-      if (window.innerHeight >= 830) {
+      if (true) {
         if (window.innerWidth >= 767) {
           const scene3Pin1 = new ScrollMagic.Scene({
             triggerElement: "#trigger3",
             triggerHook: 1,
+            offset: 100,
             duration: section1.offsetHeight,
           })
             .setPin(".circle--2")
@@ -150,10 +183,29 @@ const pinImage = () => {
         // .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
         .addTo(controller);
 
+      const circle1 = new ScrollMagic.Scene({
+        triggerElement: "#trigger1",
+        triggerHook: 0,
+        duration: section1.offsetHeight * 4,
+        offset: 100,
+      })
+        .setPin(".circle--brown")
+        .addTo(controller);
+
+      // const circle2 = new ScrollMagic.Scene({
+      //   triggerElement: "#trigger2",
+      //   triggerHook: 1,
+      //   duration: section1.offsetHeight,
+      //   offset: 0,
+      // })
+      //   .setPin(".circle--1")
+      //   .addTo(controller);
+
+
       const scene2 = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
-        triggerHook: 1,
-        duration: section1.offsetHeight,
+        triggerHook: 0.2,
+        duration: section1.offsetHeight / 3.2,
         offset: 100,
       })
         // .setPin(".pator-el--1")
@@ -164,8 +216,8 @@ const pinImage = () => {
 
       const scene3 = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
-        triggerHook: 1,
-        duration: section1.offsetHeight,
+        triggerHook: 0.2,
+        duration: section1.offsetHeight / 3.2,
         offset: 120,
       })
         // .setPin(".pator-el--2")
@@ -176,8 +228,8 @@ const pinImage = () => {
 
       const scene4 = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
-        triggerHook: 1,
-        duration: section1.offsetHeight,
+        triggerHook: 0.2,
+        duration: section1.offsetHeight / 3.2,
         offset: 140,
       })
         // .setPin(".pator-el--3")
@@ -186,16 +238,10 @@ const pinImage = () => {
         // .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
-      // const scene4Pin = new ScrollMagic.Scene({triggerElement: "#trigger1", triggerHook: 1, duration: section1.offsetHeight * 2, offset: 550})
-      //   .setPin(".pator-el--3")
-      //   .setClassToggle(".pator-el--3", "active")
-      //   // .addIndicators() // add indicators (requires plugin)
-      //   .addTo(controller)
-
       const scene5 = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
-        triggerHook: 1,
-        duration: section1.offsetHeight,
+        triggerHook: 0.2,
+        duration: section1.offsetHeight / 3.2,
         offset: 160,
       })
         // .setPin(".pator-el--4")
@@ -207,7 +253,7 @@ const pinImage = () => {
       const scene6 = new ScrollMagic.Scene({
         triggerElement: "#trigger2",
         triggerHook: 0.6,
-        duration: section1.offsetHeight - 400,
+        duration: section1.offsetHeight / 2,
         offset: 100,
       })
         // .setPin(".pator-el--1")
@@ -219,7 +265,7 @@ const pinImage = () => {
       const scene7 = new ScrollMagic.Scene({
         triggerElement: "#trigger2",
         triggerHook: 0.6,
-        duration: section1.offsetHeight - 400,
+        duration: section1.offsetHeight / 2,
         offset: 100,
       })
         // .setPin(".pator-el--2")
@@ -231,7 +277,7 @@ const pinImage = () => {
       const scene8 = new ScrollMagic.Scene({
         triggerElement: "#trigger2",
         triggerHook: 0.6,
-        duration: section1.offsetHeight - 400,
+        duration: section1.offsetHeight / 2,
         offset: 100,
       })
         // .setPin(".pator-el--3")
@@ -248,39 +294,40 @@ const pinImage = () => {
 
       const patorOpenSide = new ScrollMagic.Scene({
         triggerElement: "#trigger3",
-        duration: 400,
-        offset: 100,
+        duration: 1000,
+        offset: 10,
       })
         .setPin(".pator-front--open-side")
         // .setTween('.pator-front--open-side', {autoAlpha: 1})
         .setClassToggle(".pator-front--open-side", "active")
         .addTo(controller);
 
-      const patorOpenHide = new ScrollMagic.Scene({
-        triggerElement: "#trigger3",
-        triggerHook: 1,
-        duration: 300,
-        offset: 100,
-      })
-        .setTween('.pator-front', {autoAlpha: 0})
-        .addTo(controller);
-
-      const patorOpenClose = new ScrollMagic.Scene({
-        triggerElement: "#trigger3",
-        triggerHook: 1,
-        duration: 400,
-        offset: 100,
-      })
-        .setTween('.pator-front--open', {autoAlpha: 0})
-        .addTo(controller);
+      // const patorOpenHide = new ScrollMagic.Scene({
+      //   triggerElement: "#trigger3",
+      //   triggerHook: 1,
+      //   duration: 300,
+      //   offset: 100,
+      // })
+      //   .setClassToggle('.pator-front--open', 'hidden')
+      //   .addTo(controller);
+      //
+      // const patorOpenClose = new ScrollMagic.Scene({
+      //   triggerElement: "#trigger3",
+      //   triggerHook: 1,
+      //   duration: 400,
+      //   offset: 300,
+      // })
+      //   .setClassToggle('.pator-front--close', "hidden")
+      //   // .setTween('.pator-front--open', {autoAlpha: 0})
+      //   .addTo(controller);
 
       const patorOpenVis = new ScrollMagic.Scene({
         triggerElement: ".form-block",
         triggerHook: 1,
       })
         // .setTween('.pator-front', {autoAlpha: 1})
-        .setClassToggle(".form-block", "active")
-        .setTween(tween4)
+        .setClassToggle(".pator-front--close", "active")
+        // .setTween(tween4)
         .addTo(controller);
 
       const scene9 = new ScrollMagic.Scene({
@@ -425,7 +472,7 @@ const pinImage = () => {
 
     if (window.innerWidth <= 767) {
       $(".circle").parallaxContent({
-        shift: -10
+        shift: -5
       });
     }
   });

@@ -3,7 +3,7 @@
 <head>
 
   <include src="source/html/base/head.html"></include>
-  <title></title>
+  <title>Прицепной агрегат технического обслуживания и ремонта ПАТОР - купить в России, цена от производителя</title>
 
 </head>
 <body>
@@ -22,7 +22,7 @@
       <include src="source/html/components/equipment.html"></include>
       <include src="source/html/components/price.html"></include>
       <include src="source/html/components/warranty.html"></include>
-      <include src="source/html/components/review.html"></include>
+<!--      <include src="source/html/components/review.html"></include>-->
       <include src="source/html/components/map.html"></include>
       <include src="source/html/components/buy.html"></include>
     </div>
@@ -39,7 +39,7 @@
       деталей
     </div>
 
-    <form action="" method="POST" class="feedback-form">
+    <form action="/form.php" method="POST" class="feedback-form">
       <div class="input-wrapper input-wrapper--hidden">
         <input id="name-product" type="hidden" name="name-product" data-ignored>
       </div>
@@ -67,7 +67,7 @@
       деталей
     </div>
 
-    <form action="" method="POST" class="feedback-form">
+    <form action="/form.php" method="POST" class="feedback-form">
       <div class="input-wrapper input-wrapper--hidden">
         <input id="name-product" type="hidden" name="name-product" data-ignored>
       </div>
@@ -95,7 +95,7 @@
       деталей
     </div>
 
-    <form action="" method="POST" class="feedback-form">
+    <form action="/form.php" method="POST" class="feedback-form">
       <div class="input-wrapper input-wrapper--hidden">
         <input id="name-product" type="hidden" name="name-product" data-ignored>
       </div>
@@ -109,11 +109,74 @@
         <label class="label" for="name">Имя</label>
       </div>
       <div class="input-wrapper input-wrapper--textarea">
-        <textarea name="text" id="" placeholder="Сообщение"></textarea>
+        <textarea name="text"  placeholder="Сообщение"></textarea>
       </div>
 
       <button class="main-btn" type="submit">ОТПРАВИТЬ</button>
     </form>
+  </div>
+  <div style="display: none" id="additional-options1" class="additional-options">
+
+    <div class="additional-options__content">
+
+      <div class="title-modal">
+        <span class="title-modal__name">
+          ПАТОР А
+        </span>
+
+        <span class="title-modal__text">
+          ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ
+        </span>
+      </div>
+
+      <div class="title-additional-opt">
+        ПАТОР А может быть дополнительно укомплектован:
+      </div>
+
+      <ul class="additional-options__list">
+        <li class="checkbox">
+          <p>
+            автономная электростанция, <span>мощность 2,2 Квт., напряжение 220В</span>;
+          </p>
+        </li>
+
+        <li class="checkbox">
+          <p>
+            пожарный насос НШН 600, <span>рабочее давление 4,5 кг/кв. см</span>.;
+          </p>
+        </li>
+
+        <li class="checkbox">
+          <p>
+            всасывающий рукав В-1-75 <span>длиной 4 м с соединением ГР-80-2шт</span>.;
+          </p>
+        </li>
+
+        <li class="checkbox">
+          <p>
+            рукав пожарный напорный РПМ(В)-65-1,6 <span>с соединением ГР70(ЕТМ)-1шт</span>.;
+          </p>
+        </li>
+
+        <li class="checkbox">
+          <p>
+            ствол пожарный ручной РСКЗ-70 <span>-1шт</span>.;
+          </p>
+        </li>
+
+        <li class="checkbox">
+          <p>
+            комплект газорезательного оборудования;
+          </p>
+        </li>
+
+        <li class="checkbox">
+          <p>
+            набор слесарно-монтажного инструмента.
+          </p>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div style="display: none" id="additional-options2" class="additional-options">
@@ -249,6 +312,10 @@
       Спасибо, <br>
       мы Вам перезвоним!
     </div>
+  </div>
+
+  <div id="preloader" class="preloader">
+    <img src="img/svg/meti-logo.svg" alt="METI">
   </div>
 
 </div>

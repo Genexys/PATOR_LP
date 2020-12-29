@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="144.16" height="107.24" viewBox="0 0 144.16 107.24">
-  <g id="meti-logo" transform="translate(0)">
-    <path id="Path_1" data-name="Path 1" d="M14.318,31.477H1V77.614H13.965l58.984,30.52,58.984-30.52h13.022V31.477H131.636L72.977,1.125Z" transform="translate(-0.897 -1.009)" fill="#fff"/>
-    <path id="Path_2" data-name="Path 2" d="M.206,30.57H13.446L72.08.231,130.714,30.57h13.241V76.5H131.011L72.052,107.009,13.093,76.5H.206ZM72.08,0l-.094.049L13.4,30.365H0V76.707H13.043l58.915,30.484.094.049.094-.049,58.915-30.484h13.1V30.365h-13.4L72.175.049,72.08,0Z" transform="translate(0)" fill="#fd6f6f"/>
-    <path id="Path_3" data-name="Path 3" d="M79.615,359.474l6.99,11.341,7.01-11.341h15.531v33.173H93.409V373.672l-6.773,9.588L79.8,373.672v18.976H64.064V359.474Z" transform="translate(-57.479 -322.525)" fill="#3e3e3e"/>
-    <path id="Path_4" data-name="Path 4" d="M555.235,359.474v7.655H539.074v5.1h16.162v7.655H539.074v5.1h16.162v7.655h-31.9V359.474Z" transform="translate(-469.545 -322.525)" fill="#3e3e3e"/>
-    <path id="Path_5" data-name="Path 5" d="M878.163,367.129v25.518H862.427V367.129h-8.081v-7.655h31.9v7.655Z" transform="translate(-766.53 -322.525)" fill="#3e3e3e"/>
-    <rect id="Rectangle_5" data-name="Rectangle 5" width="15.736" height="33.173" transform="translate(121.84 36.949)" fill="#3e3e3e"/>
-    <path id="Path_6" data-name="Path 6" d="M316.239,75.2l44.143,22.841H272.1Z" transform="translate(-244.128 -67.467)" fill="#fd6f6f"/>
-    <path id="Path_7" data-name="Path 7" d="M312.521,767.281l-44.469-23.009h88.937Z" transform="translate(-240.5 -667.77)" fill="#fd6f6f"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="144.955" height="108.135" viewBox="0 0 144.955 108.135">
+  <g id="meti-logo" transform="translate(0.397 0.447)">
+    <path id="Контур_1" data-name="Контур 1" d="M14.318,31.477H1V77.614H13.965l58.984,30.52,58.984-30.52h13.022V31.477H131.636L72.977,1.125Z" transform="translate(-0.897 -1.009)" fill="#fff" stroke="#fd6f6f" stroke-width="1"/>
+    <path id="Контур_3" data-name="Контур 3" d="M79.615,359.474l6.99,11.341,7.01-11.341h15.531v33.173H93.409V373.672l-6.773,9.588L79.8,373.672v18.976H64.064V359.474Z" transform="translate(-57.479 -322.525)" fill="#3e3e3e"/>
+    <path id="Контур_4" data-name="Контур 4" d="M555.235,359.474v7.655H539.074v5.1h16.162v7.655H539.074v5.1h16.162v7.655h-31.9V359.474Z" transform="translate(-469.545 -322.525)" fill="#3e3e3e"/>
+    <path id="Контур_5" data-name="Контур 5" d="M878.163,367.129v25.518H862.427V367.129h-8.081v-7.655h31.9v7.655Z" transform="translate(-766.53 -322.525)" fill="#3e3e3e"/>
+    <rect id="Прямоугольник_5" data-name="Прямоугольник 5" width="15.736" height="33.173" transform="translate(121.84 36.949)" fill="#3e3e3e"/>
+    <path id="Контур_6" data-name="Контур 6" d="M316.239,75.2l44.143,22.841H272.1Z" transform="translate(-244.128 -67.467)" fill="#fd6f6f"/>
+    <path id="Контур_7" data-name="Контур 7" d="M312.521,767.281l-44.469-23.009h88.937Z" transform="translate(-240.5 -667.77)" fill="#fd6f6f"/>
   </g>
 </svg>

@@ -11,6 +11,9 @@ const validateFooterForm = () => {
         },
         email: {
           presence: true,
+          format: {
+            pattern: /^([A-z0-9_-]+\.)*[A-z0-9_-]+@[A-z0-9_-]+(\.[A-z0-9_-]+)*\.[A-z]{2,6}$/
+          }
         },
       };
 

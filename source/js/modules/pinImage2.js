@@ -10,19 +10,19 @@ const pinImage = () => {
     const timeline2 = new TimelineMax();
 
     timeline1
-      .to('.pator-el--1', 0, {autoAlpha: 1, pointerEvents: 'auto'}, 100)
-      .to('.pator-el--2', 0, {autoAlpha: 1, pointerEvents: 'auto'}, 100)
-      .to('.pator-el--3', 0, {autoAlpha: 1, pointerEvents: 'auto'}, 100)
-      .to('.pator-el--4', 0, {autoAlpha: 1, pointerEvents: 'auto'}, 100);
+      .to('.pator-el--1', 1, {autoAlpha: 1, pointerEvents: 'auto'}, 100)
+      .to('.pator-el--2', 1, {autoAlpha: 1, pointerEvents: 'auto'}, 100)
+      .to('.pator-el--3', 1, {autoAlpha: 1, pointerEvents: 'auto'}, 100)
+      .to('.pator-el--4', 1, {autoAlpha: 1, pointerEvents: 'auto'}, 100);
     // .to('.pator-front--close', 2, {autoAlpha: 0}, section1.offsetHeight * 2 + 300)
     // .to('.pator-front--open', 2, {autoAlpha: 1}, section1.offsetHeight * 2);;
 
 
-    timeline2
-      .to('.pator-el--1', .5, {autoAlpha: 0, pointerEvents: 'none'})
-      .to('.pator-el--2', .5, {autoAlpha: 0, pointerEvents: 'none'})
-      .to('.pator-el--3', .5, {autoAlpha: 0, pointerEvents: 'none'})
-      .to('.pator-el--4', .5, {autoAlpha: 0, pointerEvents: 'none'});
+    // timeline2
+    //   .to('.pator-el--1', .5, {autoAlpha: 0, pointerEvents: 'none'})
+    //   .to('.pator-el--2', .5, {autoAlpha: 0, pointerEvents: 'none'})
+    //   .to('.pator-el--3', .5, {autoAlpha: 0, pointerEvents: 'none'})
+    //   .to('.pator-el--4', .5, {autoAlpha: 0, pointerEvents: 'none'});
       // .to('.pator-front--open', 2, {autoAlpha: 1, ease: Power1.easeInOut}, 0)
       // .to('.pator-front', 2, {autoAlpha: 0, ease: Power1.easeInOut}, 0)
       // .to('.pator-el-open--1', 0, {autoAlpha: 1, ease: Power1.easeInOut, pointerEvents: 'auto'}, 0)
@@ -43,22 +43,22 @@ const pinImage = () => {
       triggerElement: ".first-screen",
       triggerHook: 1,
       offset: 150,
-      duration: firstScreen.offsetHeight - 300,
+      duration: firstScreen.offsetHeight * 4,
     })
-      .addIndicators('first-screen')
+      // .addIndicators('first-screen')
       .addTo(controller)
       .setTween(timeline1);
 
-    const firstEls = new ScrollMagic.Scene({
-      triggerElement: '#trigger1',
-      triggerHook: 0.3,
-      duration: section1.offsetHeight,
-      offset: 0,
-    })
-      .addIndicators('#trigger1')
-      // .setPin('.circle--1')
-      .setTween(timeline2)
-      .addTo(controller);
+    // const firstEls = new ScrollMagic.Scene({
+    //   triggerElement: '#trigger1',
+    //   triggerHook: 0.3,
+    //   duration: section1.offsetHeight,
+    //   offset: 0,
+    // })
+    //   // .addIndicators('#trigger1')
+    //   // .setPin('.circle--1')
+    //   .setTween(timeline2)
+    //   .addTo(controller);
 
 
     // const firstCircle = new ScrollMagic.Scene({
