@@ -6,7 +6,7 @@ const validateFooterForm = () => {
   for (const form of formList) {
     if (form) {
       const constraints = {
-        name: {
+        phone: {
           presence: true,
         },
         email: {
@@ -15,6 +15,13 @@ const validateFooterForm = () => {
             pattern: /^([A-z0-9_-]+\.)*[A-z0-9_-]+@[A-z0-9_-]+(\.[A-z0-9_-]+)*\.[A-z]{2,6}$/
           }
         },
+        checkbox: {
+          presence: {
+          },
+          inclusion: {
+            within: [true],
+          }
+        }
       };
 
       validateForm(form, constraints);

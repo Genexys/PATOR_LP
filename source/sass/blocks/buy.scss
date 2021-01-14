@@ -15,6 +15,7 @@
   }
 
   &__item {
+    flex: 1;
     max-width: 560px;
 
     &:first-of-type {
@@ -119,6 +120,7 @@
     color: #707070;
 
     a {
+      font-weight: 500;
       color: $color-black;
     }
   }

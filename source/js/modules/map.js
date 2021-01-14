@@ -3,23 +3,6 @@ const getMap = () => {
  * Карта
  */
 
-  function initializeMap(){
-
-    var WINDOW_WIDTH = $(window).width(),
-      map = $('.js-map'),
-      locArray = [],
-      infoWindows = [];
-
-    $('.js-map__label').each(function(){
-      locArray.push(
-        {
-          "loc": $(this).data('loc'),
-          "content": $(this).parent().get(0).outerHTML
-        }
-      );
-    });
-  }
-
   function initMap() {
     const WINDOW_WIDTH = $(window).width();
     const mapOffice = document.querySelector('.js-map-office');
@@ -118,15 +101,11 @@ const getMap = () => {
 
   }
 
-  $(document).ready(function(){
-
-    if($('body').find('.js-map').length){
-      google.maps.event.addDomListener(window, 'load', initializeMap);
-    }
-    if($('body').find('.js-map-office').length){
-      google.maps.event.addDomListener(window, 'load', initMap);
+  $(document).ready(function() {
+    if($(`body`).find(`.js-map-office`).length) {
+      initMap();
     }
   });
-}
+};
 
 export {getMap};

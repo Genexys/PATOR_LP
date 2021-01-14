@@ -21,10 +21,12 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     max-width: 601px;
     width: 100%;
     height: 595px;
-    padding: 60px 35px 30px 60px;
+    padding: 60px 35px 21px 60px;
     border-radius: 5px;
     background: #ffffff;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -35,7 +37,7 @@
     }
 
     @media screen and (max-width: 1024px) {
-      padding: 60px 30px;
+      padding: 60px 30px 20px;
     }
   }
 
@@ -264,10 +266,10 @@
   }
 }
 
-.addition-bottom {
+.button-bottom {
   display: flex;
   align-items: center;
-  flex-grow: 1;
+  margin-top: auto;
 
   @media screen and (max-width: 540px) {
     flex-direction: column;

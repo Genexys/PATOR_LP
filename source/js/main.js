@@ -7,6 +7,8 @@ import {validateFooterForm} from "./modules/validateForm";
 import {goTo} from "./modules/goTo";
 import {scrollToMenu} from "./modules/scrollToMenu";
 import {preload} from "./modules/preload";
+import {privacyPolicy} from "./modules/privacyPolicy";
+import {phoneMask} from "./modules/phoneMask";
 
 // Utils
 // ---------------------------------
@@ -23,4 +25,6 @@ validateFooterForm();
 goTo();
 scrollToMenu();
 preload();
+privacyPolicy();
+phoneMask();
 

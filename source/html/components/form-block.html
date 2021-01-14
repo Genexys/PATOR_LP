@@ -3,6 +3,7 @@
     <div class="form-wrapper">
 
       <div class="section-title form-block__title">Свяжитесь с нами</div>
+      <div class="section-title form-block__second-title"><a href="tel:+7 86153 5-70-70">+7 86153 5-70-70</a></div>
       <div class="section-description form-block__description">Ответим на все вопросы, проконсультируем по условиям</div>
 
       <form action="" method="POST" class="feedback-form">
@@ -11,11 +12,18 @@
           <label class="label" for="email">Email</label>
         </div>
         <div class="input-wrapper">
-          <input id="name" type="text" name="name">
-          <label class="label" for="name">Имя</label>
+          <input id="phone" type="tel" name="phone">
+          <label class="label" for="phone">Телефон</label>
         </div>
         <div class="input-wrapper input-wrapper--textarea">
           <textarea name="text" id="" placeholder="Сообщение"></textarea>
+        </div>
+
+        <div class="privacy-policy-block">
+          <label class="input-wrapper input-wrapper--checkbox">
+            <input type="checkbox" name="checkbox" checked>
+          </label>
+          <button class="privacy-policy-link" type="button" id="privacy-policy-link">Согласие на обработку персональных данных</button>
         </div>
 
         <button class="main-btn" type="submit">ОТПРАВИТЬ</button>

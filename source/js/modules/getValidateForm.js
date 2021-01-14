@@ -93,7 +93,7 @@ export const validateForm = function (form, config, closeModal= false) {
               src: '#thnx-modal',
               type: 'inline',
             });
-          }, 2000);
+          }, 4000);
 
           form.querySelector('.main-btn').removeAttribute('disabled');
 

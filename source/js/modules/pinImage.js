@@ -4,11 +4,9 @@ const pinImage = () => {
   document.addEventListener(`DOMContentLoaded`, () => {
     var md = new MobileDetect(window.navigator.userAgent);
     let telInput = document.querySelectorAll('input[type="tel"]');
-    console.log('run');
-    console.log(md.tablet(), md.phone(), md.mobile(), md.tablet() === "iPad", md.phone() === 'IPhone' );
 
     if (window.innerWidth > 1024 && md.os() !== 'iOS') {
-      console.log('ios');
+
       const section1 = document.querySelectorAll('.section')[0];
 
       // init controller

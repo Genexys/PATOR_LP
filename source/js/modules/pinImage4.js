@@ -31,15 +31,15 @@ const pinImage = () => {
         .setPin("#pin1")
         .setClassToggle('.pator-front--open', 'active')
         .addTo(controller);
-
-      const patorCloseHidden = new ScrollMagic.Scene({
-        triggerElement: "#trigger1",
-        triggerHook: 0,
-        offset: 500,
-        duration: section1.offsetHeight * 3,
-      })
-        .setClassToggle('.pator-front--close', 'hidden')
-        .addTo(controller);
+      //
+      // const patorCloseHidden = new ScrollMagic.Scene({
+      //   triggerElement: "#trigger1",
+      //   triggerHook: 0,
+      //   offset: 480,
+      //   duration: section1.offsetHeight * 3,
+      // })
+      //   .setClassToggle('.pator-front--close', 'hidden')
+      //   .addTo(controller);
 
       const scene2 = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
@@ -150,6 +150,14 @@ const pinImage = () => {
         triggerHook: 0.2,
       })
         .setClassToggle(".pator-front--open", 'hidden')
+        .addTo(controller);
+
+      const patorCloseHidden = new ScrollMagic.Scene({
+        triggerElement: "#trigger2",
+        triggerHook: 0.2,
+        duration: 800,
+      })
+        .setClassToggle(".pator-front--close", 'hidden')
         .addTo(controller);
 
       const patorOpenVis = new ScrollMagic.Scene({
@@ -270,6 +278,8 @@ const pinImage = () => {
       svgLineOpen1span.style.top = (patorFrontOpenBox.width / 4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
 
       svgLineOpen2span.style.width = (patorFrontOpenBox.width / 4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
+      svgLineOpen2span.style.bottom = (patorFrontOpenBox.width / 4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
+
       svgLineOpen3span.style.width = (patorFrontOpenBox.width / 4.4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
 
       svgLineOpenSide1.style.width = (patorFrontOpenSideBox.width / 1.5 + patorFrontOpenSideBox.x) - patorElOpenSide1Box.right / 1.2 + 'px';
@@ -322,6 +332,9 @@ const pinImage = () => {
         svgLineOpen1span.style.width = (patorFrontOpenBox.width / 4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
         svgLineOpen1span.style.top = (patorFrontOpenBox.width / 4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
 
+        svgLineOpen2span.style.width = (patorFrontOpenBox.width / 4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
+        svgLineOpen2span.style.bottom = (patorFrontOpenBox.width / 4 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
+
         svgLineOpen3span.style.width = (patorFrontOpenBox.width / 3.5 + patorFrontOpenBox.x) - patorElOpen1Box.right / 1.2 + 'px';
 
         svgLineOpenSide1.style.width = (patorFrontOpenSideBox.width / 1.5 + patorFrontOpenSideBox.x) - patorElOpenSide1Box.right / 1.2 + 'px';
@@ -339,10 +352,10 @@ const pinImage = () => {
     }
 
     if (window.innerWidth <= 767) {
-      $(".circle").parallaxContent({
-        shift: -30,
-        duration: 3
-      });
+      // $(".circle").parallaxContent({
+      //   shift: -30,
+      //   duration: 3
+      // });
 
       let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const logo = document.querySelector(`.first-screen__text-wrapper`);
@@ -360,15 +373,21 @@ const pinImage = () => {
         }
       };
 
-      posPator();
+      // posPator();
+      //
+      // document.addEventListener(`scroll`, (evt) => {
+      //   currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      //   logoBox = logo.getBoundingClientRect();
+      //   logoY = logoBox.y;
+      //   logoHeight = logoBox.height;
+      //   posPator();
+      // });
+    }
 
-      document.addEventListener(`scroll`, (evt) => {
-        currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        logoBox = logo.getBoundingClientRect();
-        logoY = logoBox.y;
-        logoHeight = logoBox.height;
-        posPator();
-      });
+    console.log(md.phone(), md.mobile(), md.tablet());
+
+    if (md.mobile() && md.tablet() === null) {
+      document.body.classList.add('mobile')
     }
   });
 };
